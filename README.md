@@ -1,6 +1,8 @@
-# TalentPool
+# OrbitGrant
 
-Company landing page for **TalentPool** — a global talent network for IT professionals offering job bidding support, resume optimization, interview coaching, and career acceleration.
+Company landing page for **OrbitGrant** — a global talent network for IT professionals offering job bidding support, resume optimization, interview coaching, and career acceleration.
+
+**Website:** [http://orbitgrant.org/](http://orbitgrant.org/)
 
 ## Tech stack
 
@@ -11,7 +13,6 @@ Company landing page for **TalentPool** — a global talent network for IT profe
 ## Prerequisites
 
 - [Node.js](https://nodejs.org/) 20+ (LTS recommended)
- Website domain : http://orbitgrant.org/
 ## Getting started
 
 ```bash
@@ -78,7 +79,7 @@ The dev server runs on port **5174** by default (`vite.config.ts`). If that port
 Update the contact address in `src/components/Contact.tsx`:
 
 ```ts
-const CONTACT_EMAIL = 'contact@talentpool.com'
+const CONTACT_EMAIL = 'contact@orbitgrant.com'
 ```
 
 The contact form opens the user’s email client with a prefilled message (`mailto:`). For server-side form handling, wire the form to your API or a service like Formspree.

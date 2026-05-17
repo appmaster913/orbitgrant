@@ -1,10 +1,10 @@
 import { useState, type FormEvent } from 'react'
 import { SectionHeading } from './SectionHeading'
 
-const CONTACT_EMAIL = 'contact@talentpool.com'
+const CONTACT_EMAIL = 'contact@orbitgrant.com'
 
 const inquiryTypes = [
-  { value: 'talent', label: 'Join the Talent Pool' },
+  { value: 'talent', label: 'Join OrbitGrant' },
   { value: 'coach', label: 'Apply as a Coach' },
   { value: 'partnership', label: 'Partnership / Recruiting' },
   { value: 'general', label: 'General inquiry' },
@@ -46,7 +46,7 @@ export function Contact() {
     }
 
     const typeLabel = inquiryTypes.find((t) => t.value === type)?.label ?? type
-    const subject = `TalentPool — ${typeLabel}`
+    const subject = `OrbitGrant — ${typeLabel}`
     const body = `Name: ${name}\nEmail: ${email}\nInquiry: ${typeLabel}\n\n${message}`
 
     window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
@@ -60,7 +60,7 @@ export function Contact() {
         <SectionHeading
           label="Contact"
           title="Get in touch"
-          description="Questions about joining the talent pool, becoming a coach, or partnering with us? Send a message and we'll get back to you."
+          description="Questions about joining OrbitGrant, becoming a coach, or partnering with us? Send a message and we'll get back to you."
         />
 
         <div className="grid lg:grid-cols-5 gap-12 lg:gap-16">

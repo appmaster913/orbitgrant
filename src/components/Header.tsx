@@ -14,10 +14,10 @@ export function Header() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 lg:px-8">
         <a href="#" className="flex items-center gap-2.5 group">
           <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-cyan-400 to-indigo-500 text-sm font-bold text-ink">
-            TP
+            OG
           </span>
           <span className="text-lg font-semibold text-white group-hover:text-cyan-300 transition-colors">
-            TalentPool
+            OrbitGrant
           </span>
         </a>
 
@@ -38,7 +38,7 @@ export function Header() {
             Become a Coach
           </Button>
           <Button href="#join" variant="primary" className="!py-2.5 !px-5">
-            Join Pool
+            Join Now
           </Button>
         </div>
       </div>

@@ -43,7 +43,7 @@ export function Hero() {
 
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
           <Button href="#join" variant="primary" className="w-full sm:w-auto text-base px-8 py-3.5">
-            Join the Talent Pool
+            Join OrbitGrant
           </Button>
           <Button href="#coaches" variant="secondary" className="w-full sm:w-auto text-base px-8 py-3.5">
             Become a Coach

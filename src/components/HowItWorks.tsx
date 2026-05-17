@@ -3,7 +3,7 @@ import { SectionHeading } from './SectionHeading'
 const steps = [
   {
     number: '01',
-    title: 'Join the Talent Pool',
+    title: 'Join OrbitGrant',
     description: 'Create your profile, skills, and career goals.',
   },
   {
