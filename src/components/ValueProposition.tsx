@@ -12,10 +12,10 @@ export function ValueProposition() {
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div>
-            <p className="text-cyan-400 text-sm font-semibold tracking-widest uppercase mb-3">
+            <p className="text-cyan-600 text-sm font-semibold tracking-widest uppercase mb-3">
               Value
             </p>
-            <h2 className="font-serif text-3xl sm:text-4xl lg:text-[2.75rem] leading-tight text-white font-semibold tracking-tight">
+            <h2 className="font-serif text-3xl sm:text-4xl lg:text-[2.75rem] leading-tight text-[var(--color-fg)] font-semibold tracking-tight">
               Why choose us?
             </h2>
           </div>
@@ -24,12 +24,12 @@ export function ValueProposition() {
             {benefits.map((benefit, i) => (
               <li
                 key={benefit}
-                className="flex items-center gap-4 rounded-xl border border-[var(--color-border)] bg-[var(--color-surface-elevated)] px-6 py-4"
+                className="flex items-center gap-4 rounded-xl border border-[var(--color-border)] bg-white px-6 py-4 shadow-sm"
               >
-                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-cyan-400/10 text-cyan-400 font-semibold text-sm">
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-cyan-100 text-cyan-600 font-semibold text-sm">
                   {String(i + 1).padStart(2, '0')}
                 </span>
-                <span className="text-white/90">{benefit}</span>
+                <span className="text-[var(--color-fg)]/90">{benefit}</span>
               </li>
             ))}
           </ul>

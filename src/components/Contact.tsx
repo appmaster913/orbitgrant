@@ -23,7 +23,7 @@ const contactInfo = [
 ]
 
 const inputClass =
-  'w-full rounded-xl border border-[var(--color-border)] bg-[var(--color-surface-elevated)] px-4 py-3 text-white placeholder:text-[var(--color-muted)]/60 focus:border-cyan-400/50 focus:outline-none focus:ring-2 focus:ring-cyan-400/20 transition-colors'
+  'w-full rounded-xl border border-[var(--color-border)] bg-white px-4 py-3 text-[var(--color-fg)] placeholder:text-[var(--color-muted)]/60 focus:border-cyan-500/50 focus:outline-none focus:ring-2 focus:ring-cyan-500/20 transition-colors'
 
 export function Contact() {
   const [submitted, setSubmitted] = useState(false)
@@ -73,22 +73,22 @@ export function Contact() {
                 {item.href ? (
                   <a
                     href={item.href}
-                    className="text-lg text-white hover:text-cyan-300 transition-colors"
+                    className="text-lg text-[var(--color-fg)] hover:text-cyan-600 transition-colors"
                   >
                     {item.value}
                   </a>
                 ) : (
-                  <p className="text-lg text-white">{item.value}</p>
+                  <p className="text-lg text-[var(--color-fg)]">{item.value}</p>
                 )}
               </div>
             ))}
 
-            <div className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface-elevated)] p-6">
+            <div className="rounded-2xl border border-[var(--color-border)] bg-white p-6 shadow-sm">
               <p className="text-sm text-[var(--color-muted)] leading-relaxed">
                 Prefer email? Reach us directly at{' '}
                 <a
                   href={`mailto:${CONTACT_EMAIL}`}
-                  className="text-cyan-400 hover:text-cyan-300 transition-colors"
+                  className="text-cyan-600 hover:text-cyan-700 transition-colors"
                 >
                   {CONTACT_EMAIL}
                 </a>
@@ -98,14 +98,14 @@ export function Contact() {
 
           <div className="lg:col-span-3">
             {submitted ? (
-              <div className="rounded-2xl border border-cyan-400/30 bg-cyan-400/5 p-8 text-center">
+              <div className="rounded-2xl border border-cyan-200 bg-cyan-50 p-8 text-center">
                 <p className="text-2xl mb-2" aria-hidden>
                   ✓
                 </p>
-                <h3 className="text-xl font-semibold text-white">Message ready to send</h3>
+                <h3 className="text-xl font-semibold text-[var(--color-fg)]">Message ready to send</h3>
                 <p className="mt-2 text-[var(--color-muted)]">
                   Your email app should open with your message. If it didn&apos;t, email us at{' '}
-                  <a href={`mailto:${CONTACT_EMAIL}`} className="text-cyan-400 hover:text-cyan-300">
+                  <a href={`mailto:${CONTACT_EMAIL}`} className="text-cyan-600 hover:text-cyan-700">
                     {CONTACT_EMAIL}
                   </a>
                   .
@@ -113,7 +113,7 @@ export function Contact() {
                 <button
                   type="button"
                   onClick={() => setSubmitted(false)}
-                  className="mt-6 text-sm text-cyan-400 hover:text-cyan-300 transition-colors"
+                  className="mt-6 text-sm text-cyan-600 hover:text-cyan-700 transition-colors"
                 >
                   Send another message
                 </button>
@@ -122,8 +122,8 @@ export function Contact() {
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div className="grid sm:grid-cols-2 gap-5">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-white/90 mb-2">
-                      Name <span className="text-cyan-400">*</span>
+                    <label htmlFor="name" className="block text-sm font-medium text-[var(--color-fg)]/90 mb-2">
+                      Name <span className="text-cyan-600">*</span>
                     </label>
                     <input
                       id="name"
@@ -136,8 +136,8 @@ export function Contact() {
                     />
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-white/90 mb-2">
-                      Email <span className="text-cyan-400">*</span>
+                    <label htmlFor="email" className="block text-sm font-medium text-[var(--color-fg)]/90 mb-2">
+                      Email <span className="text-cyan-600">*</span>
                     </label>
                     <input
                       id="email"
@@ -152,7 +152,7 @@ export function Contact() {
                 </div>
 
                 <div>
-                  <label htmlFor="type" className="block text-sm font-medium text-white/90 mb-2">
+                  <label htmlFor="type" className="block text-sm font-medium text-[var(--color-fg)]/90 mb-2">
                     Inquiry type
                   </label>
                   <select id="type" name="type" defaultValue="talent" className={inputClass}>
@@ -165,8 +165,8 @@ export function Contact() {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-white/90 mb-2">
-                    Message <span className="text-cyan-400">*</span>
+                  <label htmlFor="message" className="block text-sm font-medium text-[var(--color-fg)]/90 mb-2">
+                    Message <span className="text-cyan-600">*</span>
                   </label>
                   <textarea
                     id="message"
@@ -179,14 +179,14 @@ export function Contact() {
                 </div>
 
                 {error && (
-                  <p className="text-sm text-red-400" role="alert">
+                  <p className="text-sm text-red-600" role="alert">
                     {error}
                   </p>
                 )}
 
                 <button
                   type="submit"
-                  className="w-full sm:w-auto inline-flex items-center justify-center rounded-full px-8 py-3.5 text-sm font-semibold bg-cyan-400 text-ink hover:bg-cyan-300 shadow-lg shadow-cyan-500/20 transition-all duration-200"
+                  className="w-full sm:w-auto inline-flex items-center justify-center rounded-full px-8 py-3.5 text-sm font-semibold bg-cyan-500 text-white hover:bg-cyan-600 shadow-lg shadow-cyan-500/25 transition-all duration-200"
                 >
                   Send message
                 </button>

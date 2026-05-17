@@ -37,12 +37,12 @@ export function HowItWorks() {
           {steps.map((step) => (
             <article
               key={step.number}
-              className="relative rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface-elevated)] p-8 text-center hover:border-cyan-400/30 transition-colors"
+              className="relative rounded-2xl border border-[var(--color-border)] bg-white p-8 text-center shadow-sm hover:border-cyan-300 hover:shadow-md transition-all"
             >
               <span className="inline-block text-4xl font-bold text-cyan-400/30 mb-4">
                 {step.number}
               </span>
-              <h3 className="text-xl font-semibold text-white mb-3">{step.title}</h3>
+              <h3 className="text-xl font-semibold text-[var(--color-fg)] mb-3">{step.title}</h3>
               <p className="text-[var(--color-muted)] leading-relaxed">{step.description}</p>
             </article>
           ))}

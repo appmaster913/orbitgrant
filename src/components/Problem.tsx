@@ -22,19 +22,19 @@ export function Problem() {
           {painPoints.map((point) => (
             <li
               key={point}
-              className="flex items-start gap-3 rounded-xl border border-red-400/10 bg-red-400/5 px-5 py-4"
+              className="flex items-start gap-3 rounded-xl border border-red-200 bg-red-50 px-5 py-4"
             >
-              <span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-red-400/20 text-red-400 text-xs">
+              <span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-red-100 text-red-600 text-xs">
                 ✕
               </span>
-              <span className="text-white/90">{point}</span>
+              <span className="text-[var(--color-fg)]/90">{point}</span>
             </li>
           ))}
         </ul>
 
         <p className="mt-12 text-center text-lg text-[var(--color-muted)] max-w-2xl mx-auto">
           Even experienced engineers often get stuck between jobs for{' '}
-          <span className="text-white font-medium">months</span>.
+          <span className="text-[var(--color-fg)] font-medium">months</span>.
         </p>
       </div>
     </section>

@@ -37,12 +37,12 @@ export function Services() {
           {services.map((service) => (
             <article
               key={service.title}
-              className="group rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface-elevated)] p-8 hover:border-cyan-400/25 hover:bg-[var(--color-surface)] transition-all duration-300"
+              className="group rounded-2xl border border-[var(--color-border)] bg-white p-8 shadow-sm hover:border-cyan-300 hover:shadow-md transition-all duration-300"
             >
               <span className="text-3xl" role="img" aria-hidden>
                 {service.icon}
               </span>
-              <h3 className="mt-4 text-xl font-semibold text-white group-hover:text-cyan-300 transition-colors">
+              <h3 className="mt-4 text-xl font-semibold text-[var(--color-fg)] group-hover:text-cyan-600 transition-colors">
                 {service.title}
               </h3>
               <p className="mt-3 text-[var(--color-muted)] leading-relaxed">

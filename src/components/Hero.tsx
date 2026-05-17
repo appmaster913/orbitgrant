@@ -2,32 +2,32 @@ import { Button } from './Button'
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center pt-24 pb-20 overflow-hidden">
+    <section className="relative min-h-screen flex items-center pt-24 pb-20 overflow-hidden bg-[var(--color-ink)]">
       <div
         className="pointer-events-none absolute inset-0"
         aria-hidden
       >
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[500px] rounded-full bg-cyan-500/10 blur-[120px]" />
-        <div className="absolute bottom-0 right-0 w-[400px] h-[400px] rounded-full bg-indigo-600/15 blur-[100px]" />
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[500px] rounded-full bg-cyan-400/15 blur-[120px]" />
+        <div className="absolute bottom-0 right-0 w-[400px] h-[400px] rounded-full bg-indigo-400/10 blur-[100px]" />
         <div
-          className="absolute inset-0 opacity-[0.03]"
+          className="absolute inset-0 opacity-[0.4]"
           style={{
-            backgroundImage: `linear-gradient(rgba(255,255,255,.8) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(255,255,255,.8) 1px, transparent 1px)`,
+            backgroundImage: `linear-gradient(rgba(15,23,42,.06) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(15,23,42,.06) 1px, transparent 1px)`,
             backgroundSize: '64px 64px',
           }}
         />
       </div>
 
       <div className="relative mx-auto max-w-6xl px-6 lg:px-8 text-center">
-        <p className="inline-flex items-center gap-2 rounded-full border border-cyan-400/20 bg-cyan-400/5 px-4 py-1.5 text-sm text-cyan-300 mb-8">
-          <span className="h-1.5 w-1.5 rounded-full bg-cyan-400 animate-pulse" />
+        <p className="inline-flex items-center gap-2 rounded-full border border-cyan-200 bg-cyan-50 px-4 py-1.5 text-sm text-cyan-700 mb-8">
+          <span className="h-1.5 w-1.5 rounded-full bg-cyan-500 animate-pulse" />
           Private global career network
         </p>
 
-        <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-semibold text-white leading-[1.1] tracking-tight max-w-4xl mx-auto">
+        <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-semibold text-[var(--color-fg)] leading-[1.1] tracking-tight max-w-4xl mx-auto">
           Global Talent Network for{' '}
-          <span className="bg-gradient-to-r from-cyan-300 via-cyan-400 to-indigo-400 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-cyan-600 via-cyan-500 to-indigo-600 bg-clip-text text-transparent">
             IT Professionals
           </span>
         </h1>
@@ -37,7 +37,7 @@ export function Hero() {
           and interview coaching — all in one private global platform.
         </p>
 
-        <p className="mt-4 text-base text-white/70 font-medium">
+        <p className="mt-4 text-base text-slate-600 font-medium">
           Get hired in 2–3 months with structured professional support.
         </p>
 
@@ -50,14 +50,14 @@ export function Hero() {
           </Button>
         </div>
 
-        <div className="mt-16 grid grid-cols-3 gap-6 max-w-lg mx-auto border-t border-white/10 pt-10">
+        <div className="mt-16 grid grid-cols-3 gap-6 max-w-lg mx-auto border-t border-[var(--color-border)] pt-10">
           {[
             { value: '2–3', label: 'months avg. to hire' },
             { value: 'Global', label: 'talent network' },
             { value: '1:1', label: 'expert support' },
           ].map((stat) => (
             <div key={stat.label}>
-              <p className="text-2xl sm:text-3xl font-semibold text-white">{stat.value}</p>
+              <p className="text-2xl sm:text-3xl font-semibold text-[var(--color-fg)]">{stat.value}</p>
               <p className="text-xs sm:text-sm text-[var(--color-muted)] mt-1">{stat.label}</p>
             </div>
           ))}

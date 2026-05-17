@@ -3,15 +3,16 @@
 @theme {
   --font-sans: "Outfit", system-ui, sans-serif;
   --font-serif: "Source Serif 4", Georgia, serif;
-  --color-ink: #060b14;
-  --color-surface: #0f1729;
-  --color-surface-elevated: #162033;
-  --color-border: #243049;
-  --color-muted: #8b9cb8;
-  --color-accent: #22d3ee;
-  --color-accent-dim: #0891b2;
+  --color-ink: #ffffff;
+  --color-surface: #f8fafc;
+  --color-surface-elevated: #ffffff;
+  --color-border: #e2e8f0;
+  --color-muted: #64748b;
+  --color-fg: #0f172a;
+  --color-accent: #0891b2;
+  --color-accent-dim: #0e7490;
   --color-glow: #6366f1;
-  --color-ink-fg: #060b14;
+  --color-ink-fg: #0f172a;
 }
 
 @utility text-ink {
@@ -26,11 +27,11 @@ body {
   margin: 0;
   font-family: var(--font-sans);
   background: var(--color-ink);
-  color: #e8edf7;
+  color: var(--color-fg);
   -webkit-font-smoothing: antialiased;
 }
 
 ::selection {
-  background: color-mix(in srgb, var(--color-accent) 35%, transparent);
-  color: #fff;
+  background: color-mix(in srgb, var(--color-accent) 25%, transparent);
+  color: var(--color-fg);
 }

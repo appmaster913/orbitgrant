@@ -4,7 +4,7 @@ export function JoinCta() {
   return (
     <section id="join" className="py-20 border-t border-[var(--color-border)]">
       <div className="mx-auto max-w-3xl px-6 lg:px-8 text-center">
-        <h2 className="font-serif text-3xl sm:text-4xl font-semibold text-white">
+        <h2 className="font-serif text-3xl sm:text-4xl font-semibold text-[var(--color-fg)]">
           Ready to accelerate your tech career?
         </h2>
         <p className="mt-4 text-lg text-[var(--color-muted)]">

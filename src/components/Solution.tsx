@@ -24,28 +24,28 @@ export function Solution() {
             <ul className="space-y-4">
               {offerings.map((item) => (
                 <li key={item} className="flex items-start gap-3">
-                  <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-cyan-400/15 text-cyan-400">
+                  <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-cyan-100 text-cyan-600">
                     <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                     </svg>
                   </span>
-                  <span className="text-white/90">{item}</span>
+                  <span className="text-[var(--color-fg)]/90">{item}</span>
                 </li>
               ))}
             </ul>
           </div>
 
-          <div className="relative rounded-2xl border border-[var(--color-border)] bg-gradient-to-br from-[var(--color-surface-elevated)] to-[var(--color-surface)] p-8 lg:p-10">
+          <div className="relative rounded-2xl border border-[var(--color-border)] bg-gradient-to-br from-white to-slate-50 p-8 lg:p-10 shadow-sm">
             <div className="absolute -top-px left-8 right-8 h-px bg-gradient-to-r from-transparent via-cyan-400/50 to-transparent" />
-            <p className="font-serif text-2xl sm:text-3xl text-white leading-snug">
+            <p className="font-serif text-2xl sm:text-3xl text-[var(--color-fg)] leading-snug">
               We don&apos;t just help you apply —{' '}
-              <span className="text-cyan-400">we help you win offers.</span>
+              <span className="text-cyan-600">we help you win offers.</span>
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               {['Resume', 'Interview', 'Bidding', 'Matching'].map((tag) => (
                 <span
                   key={tag}
-                  className="rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-sm text-[var(--color-muted)]"
+                  className="rounded-full border border-[var(--color-border)] bg-slate-50 px-4 py-1.5 text-sm text-[var(--color-muted)]"
                 >
                   {tag}
                 </span>

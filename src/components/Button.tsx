@@ -9,11 +9,11 @@ type ButtonProps = {
 
 const variants = {
   primary:
-    'bg-cyan-400 text-ink font-semibold hover:bg-cyan-300 shadow-lg shadow-cyan-500/20',
+    'bg-cyan-500 text-white font-semibold hover:bg-cyan-600 shadow-lg shadow-cyan-500/25',
   secondary:
-    'bg-white/10 text-white font-medium hover:bg-white/15 border border-white/10',
+    'bg-slate-100 text-[var(--color-fg)] font-medium hover:bg-slate-200 border border-[var(--color-border)]',
   outline:
-    'border border-cyan-400/50 text-cyan-300 font-medium hover:bg-cyan-400/10',
+    'border border-cyan-600/40 text-cyan-700 font-medium hover:bg-cyan-50',
 }
 
 export function Button({

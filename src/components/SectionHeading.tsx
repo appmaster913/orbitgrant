@@ -16,11 +16,11 @@ export function SectionHeading({
   return (
     <div className={`max-w-3xl mb-14 ${alignClass}`}>
       {label && (
-        <p className="text-cyan-400 text-sm font-semibold tracking-widest uppercase mb-3">
+        <p className="text-cyan-600 text-sm font-semibold tracking-widest uppercase mb-3">
           {label}
         </p>
       )}
-      <h2 className="font-serif text-3xl sm:text-4xl lg:text-[2.75rem] leading-tight text-white font-semibold tracking-tight">
+      <h2 className="font-serif text-3xl sm:text-4xl lg:text-[2.75rem] leading-tight text-[var(--color-fg)] font-semibold tracking-tight">
         {title}
       </h2>
       {description ? (

@@ -10,15 +10,14 @@ const navLinks = [
 
 export function Header() {
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 border-b border-white/5 bg-[var(--color-ink)]/80 backdrop-blur-xl">
+    <header className="fixed top-0 left-0 right-0 z-50 border-b border-[var(--color-border)] bg-white/90 backdrop-blur-xl shadow-sm">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 lg:px-8">
-        <a href="#" className="flex items-center gap-2.5 group">
-          <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-cyan-400 to-indigo-500 text-sm font-bold text-ink">
-            OG
-          </span>
-          <span className="text-lg font-semibold text-white group-hover:text-cyan-300 transition-colors">
-            OrbitGrant
-          </span>
+        <a href="#" className="group">
+          <img
+            src="/logo.png"
+            alt="OrbitGrant"
+            className="h-10 w-auto transition-opacity group-hover:opacity-90"
+          />
         </a>
 
         <nav className="hidden md:flex items-center gap-8">
@@ -26,7 +25,7 @@ export function Header() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm text-[var(--color-muted)] hover:text-white transition-colors"
+              className="text-sm text-[var(--color-muted)] hover:text-[var(--color-fg)] transition-colors"
             >
               {link.label}
             </a>
