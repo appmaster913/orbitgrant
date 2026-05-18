@@ -1,52 +1,51 @@
-import { SectionHeading } from './SectionHeading'
+import { SectionIntro } from './SectionIntro'
 
 const steps = [
   {
-    number: '01',
+    step: '01',
     title: 'Join OrbitGrant',
-    description: 'Create your profile, skills, and career goals.',
+    description: 'Create your profile with skills, experience, and career goals.',
+    icon: 'upload',
   },
   {
-    number: '02',
-    title: 'Get Matched with Experts',
-    description: 'You are connected with resume coaches and job strategists.',
+    step: '02',
+    title: 'Get matched with experts',
+    description: 'Connect with resume coaches, job strategists, and interview mentors.',
+    icon: 'video',
   },
   {
-    number: '03',
-    title: 'Land Interviews Faster',
+    step: '03',
+    title: 'Land interviews faster',
     description:
-      'We optimize your applications and prepare you for interviews until you get hired.',
+      'We optimize applications and prep you for interviews until you get hired.',
+    icon: 'send',
   },
 ]
 
 export function HowItWorks() {
   return (
-    <section id="how-it-works" className="py-24 bg-[var(--color-surface)] border-y border-[var(--color-border)]">
-      <div className="mx-auto max-w-6xl px-6 lg:px-8">
-        <SectionHeading
-          label="Process"
-          title="Your path to employment in 3 steps"
+    <section id="how-it-works" className="section-block">
+      <div className="container-narrow">
+        <SectionIntro
+          label="Short hiring process"
+          title="From join to interviews in weeks, not months."
+          description="No endless screening loops. One profile, expert matching, and structured support until you land an offer."
         />
 
-        <div className="grid md:grid-cols-3 gap-8 relative">
-          <div
-            className="hidden md:block absolute top-12 left-[16%] right-[16%] h-px bg-gradient-to-r from-cyan-400/0 via-cyan-400/40 to-cyan-400/0"
-            aria-hidden
-          />
-
-          {steps.map((step) => (
-            <article
-              key={step.number}
-              className="relative rounded-2xl border border-[var(--color-border)] bg-white p-8 text-center shadow-sm hover:border-cyan-300 hover:shadow-md transition-all"
+        <ol className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {steps.map((item) => (
+            <li
+              key={item.step}
+              className="relative rounded-2xl border border-border bg-background p-6"
             >
-              <span className="inline-block text-4xl font-bold text-cyan-400/30 mb-4">
-                {step.number}
+              <span className="text-xs font-semibold uppercase tracking-[0.22em] text-muted-foreground">
+                Step {item.step}
               </span>
-              <h3 className="text-xl font-semibold text-[var(--color-fg)] mb-3">{step.title}</h3>
-              <p className="text-[var(--color-muted)] leading-relaxed">{step.description}</p>
-            </article>
+              <h3 className="mt-3 text-base font-semibold tracking-tight">{item.title}</h3>
+              <p className="mt-1.5 text-sm leading-6 text-muted-foreground">{item.description}</p>
+            </li>
           ))}
-        </div>
+        </ol>
       </div>
     </section>
   )

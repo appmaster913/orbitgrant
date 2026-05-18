@@ -1,32 +1,36 @@
 import { Header } from './components/Header'
 import { Hero } from './components/Hero'
-import { Problem } from './components/Problem'
-import { Solution } from './components/Solution'
-import { HowItWorks } from './components/HowItWorks'
 import { Services } from './components/Services'
-import { ValueProposition } from './components/ValueProposition'
+import { CandidateSupport } from './components/CandidateSupport'
+import { PrivateNetwork } from './components/PrivateNetwork'
+import { Qualifications } from './components/Qualifications'
+import { HowItWorks } from './components/HowItWorks'
+import { WhyUs } from './components/WhyUs'
 import { ForCoaches } from './components/ForCoaches'
+import { Testimonials } from './components/Testimonials'
 import { Contact } from './components/Contact'
 import { JoinCta } from './components/JoinCta'
 import { Footer } from './components/Footer'
 
 function App() {
   return (
-    <>
+    <div className="flex min-h-full flex-col">
       <Header />
-      <main>
+      <main className="flex-1">
         <Hero />
-        <Problem />
-        <Solution />
-        <HowItWorks />
         <Services />
-        <ValueProposition />
+        <CandidateSupport />
+        <PrivateNetwork />
+        <Qualifications />
+        <HowItWorks />
+        <WhyUs />
         <ForCoaches />
+        <Testimonials />
         <Contact />
         <JoinCta />
       </main>
       <Footer />
-    </>
+    </div>
   )
 }
 

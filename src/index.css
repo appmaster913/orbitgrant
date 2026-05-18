@@ -2,36 +2,70 @@
 
 @theme {
   --font-sans: "Outfit", system-ui, sans-serif;
-  --font-serif: "Source Serif 4", Georgia, serif;
+  --font-display: "Source Serif 4", Georgia, serif;
+  --color-background: #ffffff;
+  --color-foreground: #0f172a;
+  --color-muted: #f1f5f9;
+  --color-muted-foreground: #64748b;
+  --color-border: #e2e8f0;
+  --color-brand: #e07a3a;
+  --color-brand-end: #d97706;
+  --color-ring: #e07a3a;
   --color-ink: #ffffff;
   --color-surface: #f8fafc;
-  --color-surface-elevated: #ffffff;
-  --color-border: #e2e8f0;
-  --color-muted: #64748b;
   --color-fg: #0f172a;
-  --color-accent: #0891b2;
-  --color-accent-dim: #0e7490;
-  --color-glow: #6366f1;
-  --color-ink-fg: #0f172a;
 }
 
-@utility text-ink {
-  color: var(--color-ink-fg);
+@utility container-narrow {
+  margin-inline: auto;
+  width: 100%;
+  max-width: 72rem;
+  padding-inline: 1.5rem;
+}
+
+@utility section-block {
+  padding-block: 5rem;
+}
+
+@utility font-display {
+  font-family: var(--font-display);
+}
+
+@utility text-brand {
+  color: var(--color-brand);
+}
+
+@utility bg-brand {
+  background-color: var(--color-brand);
 }
 
 html {
   scroll-behavior: smooth;
+  height: 100%;
+}
+
+#root {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 body {
   margin: 0;
+  min-height: 100%;
   font-family: var(--font-sans);
-  background: var(--color-ink);
-  color: var(--color-fg);
+  background: var(--color-background);
+  color: var(--color-foreground);
   -webkit-font-smoothing: antialiased;
 }
 
+.bg-grid {
+  background-image:
+    linear-gradient(rgba(15, 23, 42, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 23, 42, 0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
 ::selection {
-  background: color-mix(in srgb, var(--color-accent) 25%, transparent);
-  color: var(--color-fg);
+  background: color-mix(in srgb, var(--color-brand) 25%, transparent);
 }

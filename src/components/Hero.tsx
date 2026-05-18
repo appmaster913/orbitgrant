@@ -2,65 +2,50 @@ import { Button } from './Button'
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center pt-24 pb-20 overflow-hidden bg-[var(--color-ink)]">
-      <div
-        className="pointer-events-none absolute inset-0"
-        aria-hidden
-      >
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[500px] rounded-full bg-cyan-400/15 blur-[120px]" />
-        <div className="absolute bottom-0 right-0 w-[400px] h-[400px] rounded-full bg-indigo-400/10 blur-[100px]" />
-        <div
-          className="absolute inset-0 opacity-[0.4]"
-          style={{
-            backgroundImage: `linear-gradient(rgba(15,23,42,.06) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(15,23,42,.06) 1px, transparent 1px)`,
-            backgroundSize: '64px 64px',
-          }}
-        />
-      </div>
+    <section className="relative overflow-hidden border-b border-border">
+      <div className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-b from-orange-50/80 via-background to-background" />
+      <div className="pointer-events-none absolute inset-0 -z-10 bg-grid opacity-25" />
 
-      <div className="relative mx-auto max-w-6xl px-6 lg:px-8 text-center">
-        <p className="inline-flex items-center gap-2 rounded-full border border-cyan-200 bg-cyan-50 px-4 py-1.5 text-sm text-cyan-700 mb-8">
-          <span className="h-1.5 w-1.5 rounded-full bg-cyan-500 animate-pulse" />
-          Private global career network
-        </p>
-
-        <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-semibold text-[var(--color-fg)] leading-[1.1] tracking-tight max-w-4xl mx-auto">
-          Global Talent Network for{' '}
-          <span className="bg-gradient-to-r from-cyan-600 via-cyan-500 to-indigo-600 bg-clip-text text-transparent">
-            IT Professionals
+      <div className="container-narrow relative py-20 sm:py-28 lg:py-32">
+        <div className="mx-auto max-w-3xl text-center">
+          <span className="inline-flex items-center gap-2 rounded-full border border-border bg-background/60 px-3 py-1 text-xs font-medium text-muted-foreground backdrop-blur">
+            <span className="size-1.5 rounded-full bg-brand" />
+            Private global career network
           </span>
-        </h1>
 
-        <p className="mt-6 text-lg sm:text-xl text-[var(--color-muted)] max-w-2xl mx-auto leading-relaxed">
-          Fast-track your tech career with expert job bidding, resume optimization,
-          and interview coaching — all in one private global platform.
-        </p>
+          <h1 className="font-display mt-6 text-4xl leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
+            We stand with talent. We connect them with opportunity.
+          </h1>
 
-        <p className="mt-4 text-base text-slate-600 font-medium">
-          Get hired in 2–3 months with structured professional support.
-        </p>
+          <p className="mx-auto mt-6 max-w-2xl text-base leading-7 text-muted-foreground sm:text-lg">
+            OrbitGrant is a private global network for IT professionals — expert job bidding,
+            resume optimization, and interview coaching until you land your next role.
+          </p>
 
-        <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Button href="#join" variant="primary" className="w-full sm:w-auto text-base px-8 py-3.5">
-            Join OrbitGrant
-          </Button>
-          <Button href="#coaches" variant="secondary" className="w-full sm:w-auto text-base px-8 py-3.5">
-            Become a Coach
-          </Button>
+          <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+            <Button href="#join" variant="primary" size="lg">
+              Join OrbitGrant
+            </Button>
+            <Button href="#coaches" variant="secondary" size="lg">
+              Become a Coach
+            </Button>
+          </div>
         </div>
 
-        <div className="mt-16 grid grid-cols-3 gap-6 max-w-lg mx-auto border-t border-[var(--color-border)] pt-10">
-          {[
-            { value: '2–3', label: 'months avg. to hire' },
-            { value: 'Global', label: 'talent network' },
-            { value: '1:1', label: 'expert support' },
-          ].map((stat) => (
-            <div key={stat.label}>
-              <p className="text-2xl sm:text-3xl font-semibold text-[var(--color-fg)]">{stat.value}</p>
-              <p className="text-xs sm:text-sm text-[var(--color-muted)] mt-1">{stat.label}</p>
+        <div className="relative mx-auto mt-16 max-w-5xl">
+          <div className="aspect-[16/9] w-full overflow-hidden rounded-3xl border border-border bg-gradient-to-br from-slate-100 via-orange-50 to-slate-50 shadow-xl">
+            <div className="flex h-full flex-col items-center justify-center gap-4 p-8 text-center">
+              <p className="font-display text-4xl font-semibold tracking-tight text-brand sm:text-5xl">
+                2–3 months
+              </p>
+              <p className="max-w-md text-sm text-muted-foreground sm:text-base">
+                Average target to hire with structured bidding, resume engineering, and 1:1 interview prep.
+              </p>
+              <span className="rounded-2xl border border-border bg-background/80 px-5 py-3 text-sm text-muted-foreground shadow-md backdrop-blur">
+                Private global talent ecosystem
+              </span>
             </div>
-          ))}
+          </div>
         </div>
       </div>
     </section>

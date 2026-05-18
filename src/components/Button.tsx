@@ -3,26 +3,36 @@ import type { ReactNode } from 'react'
 type ButtonProps = {
   children: ReactNode
   href?: string
-  variant?: 'primary' | 'secondary' | 'outline'
+  variant?: 'primary' | 'secondary' | 'outline' | 'ghost'
+  size?: 'sm' | 'md' | 'lg'
   className?: string
+}
+
+const sizes = {
+  sm: 'h-9 px-3 text-sm',
+  md: 'h-11 px-5 text-sm',
+  lg: 'h-12 px-6 text-base',
 }
 
 const variants = {
   primary:
-    'bg-cyan-500 text-white font-semibold hover:bg-cyan-600 shadow-lg shadow-cyan-500/25',
+    'bg-foreground text-background font-medium hover:opacity-90',
   secondary:
-    'bg-slate-100 text-[var(--color-fg)] font-medium hover:bg-slate-200 border border-[var(--color-border)]',
+    'border border-border bg-transparent text-foreground font-medium hover:bg-muted',
   outline:
-    'border border-cyan-600/40 text-cyan-700 font-medium hover:bg-cyan-50',
+    'border border-brand/40 text-brand font-medium hover:bg-orange-50',
+  ghost:
+    'bg-transparent text-foreground font-medium hover:bg-muted',
 }
 
 export function Button({
   children,
   href = '#',
   variant = 'primary',
+  size = 'md',
   className = '',
 }: ButtonProps) {
-  const classes = `inline-flex items-center justify-center rounded-full px-6 py-3 text-sm transition-all duration-200 ${variants[variant]} ${className}`
+  const classes = `inline-flex items-center justify-center gap-2 rounded-full transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/50 ${sizes[size]} ${variants[variant]} ${className}`
 
   return (
     <a href={href} className={classes}>
